@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS
-from ZenakuX-Music.core.call import VIP
+from ZenakuX-Music.core.call import APP
 from ZenakuX-Music.core.mongo import mongodb, pymongodb
 from ZenakuX-Music.utils.decorators import AdminRightsCheck
 
@@ -74,7 +74,7 @@ async def music_off(chat_id: int):
 async def pause_admin(cli, message: Message, _, chat_id):
 
     await music_off(chat_id)
-    await VIP.pause_stream(chat_id)
+    await APP.pause_stream(chat_id)
 
     buttons = [
         [
