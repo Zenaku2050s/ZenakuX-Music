@@ -1,7 +1,7 @@
 {
-    "name": "🌹⃝𖣔𝐕𝐈𝐏 𝐌𝐔𝐒𝐈𝐂🥀⛦⃕‌🇮🇳",
+    "name": "ꜱᴀꜱᴜᴋᴇ ✘ ᴍᴜꜱɪᴄ",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/3a131483d8a27dbf41b3a.jpg",
+    "logo": "https://te.legra.ph/file/e69ee26e970b904123dba.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -14,12 +14,12 @@
     "env": {
       "API_ID": {
         "description": "𝐆𝐄𝐓 𝐀𝐏𝐈 𝐈𝐃 𝐅𝐑𝐎𝐌 https://my.telegram.org",
-        "value": "14050586",
+        "value": "21248697",
         "required": true
       },
       "API_HASH": {
         "description": "𝐆𝐄𝐓 𝐀𝐏𝐈 𝐇𝐀𝐒𝐇 𝐅𝐑𝐎𝐌 https://my.telegram.org",
-        "value": "42a60d9c657b106370c79bb0a8ac560c",
+        "value": "88d33cb64a1d77cb6189233cf74aa51f",
         "required": true
       },
       "BOT_TOKEN": {
@@ -34,17 +34,17 @@
       },
       "MONGO_DB_URI": {
         "description": "𝐆𝐄𝐓 𝐀 𝐌𝐎𝐍𝐆𝐎𝐃𝐁 𝐔𝐑𝐋 𝐅𝐑𝐎𝐌 https://cloud.mongodb.com. 𝐈𝐅 𝐘𝐎𝐔 𝐃𝐎𝐍𝐓 𝐇𝐀𝐕𝐄 𝐓𝐇𝐄𝐍 𝐔𝐒𝐄 𝐀𝐋𝐑𝐄𝐀𝐃𝐘 𝐅𝐈𝐋𝐋𝐄𝐃 𝐌𝐎𝐍𝐆𝐎.",
-        "value": "mongodb+srv://Krishna:pss968048@cluster0.4rfuzro.mongodb.net/?retryWrites=true&w=majority",
+        "value": "",
         "required": true
       },
       "OWNER_ID": {
         "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐎𝐖𝐍𝐄𝐑 𝐈𝐃, 𝐔 𝐂𝐀𝐍 𝐔𝐒𝐄 𝐌𝐎𝐑𝐄 𝐏𝐄𝐑𝐒𝐎𝐍 𝐈𝐃 𝐁𝐘 𝐆𝐈𝐕𝐄𝐈𝐍𝐆 𝐒𝐏𝐀𝐂𝐄 𝐀𝐅𝐓𝐄𝐑 𝐎𝐍𝐄 𝐈𝐃.",
-        "value": "1808943146",
+        "value": "1318826936",
         "required": true
       },
       "STRING_SESSION": {
         "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐀  𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 V2 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍, 𝐈𝐅 𝐄𝐑𝐑𝐎𝐑 𝐓𝐇𝐄𝐍 𝐒𝐄𝐍𝐃 𝐄𝐑𝐑𝐎𝐑 𝐒𝐒 𝐓𝐎 𝐑𝐄𝐏𝐎 𝐎𝐖𝐍𝐄𝐑.( 𝐆𝐄𝐓 𝐅𝐑𝐎𝐌 = t.me/VIP_STRING_ROBOT ) . ",
-        "value": "",
+        "value": "BQGXyHkAAGY5YMD_C4VHVinC_LvWisSC-KufSD7Z1F9HmdYDeZK6GurplkTCqyB1lvJ5_PdP1hdfpEsZT7SmIIRKbd9gHxzKLpqy8q6cU_9mD2mt1FbB5s2_hfjqggxeKT67Q3k8OnMbWIN1aoX2z1z9lJL6EB7tTJP7sI5eBAjKt5eiBj1Upzx46ndTnD_f0Y8RtYlTsGPD9zDPOLhKQiGHKMBxoqy4R7Avu9C_M0g7DyZC5yiLIeinp5V8vaaTu-qRCrukPDBq-0Wd7eWS31IsUE2Q8wLIvP_Os7-MPdk8BWbAZC_PfaRzvo-pEwZBiADrIUtwqqvBi-cuL6oHLr3IduP2NgAAAAFMhavJAA",
         "required": true
       },
       "HEROKU_API_KEY": {
@@ -74,7 +74,7 @@
       },
       "LOGGER_ID": {
         "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐋𝐎𝐆 𝐆𝐑𝐎𝐔𝐏 𝐈𝐃 𝐖𝐇𝐄𝐑𝐄 𝐘𝐎𝐔𝐑 𝐁𝐎𝐓 𝐀𝐋𝐖𝐀𝐘𝐒 𝐒𝐓𝐀𝐘 𝐀𝐃𝐌𝐈𝐍 (𝐈𝐃 𝐌𝐔𝐒𝐓 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐖𝐈𝐓𝐇 -100).",
-        "value": "",
+        "value": "-1002016915736",
         "required": true
       }
     },
