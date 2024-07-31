@@ -11,7 +11,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS, lyrical
 from ZenakuX-Music import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from ZenakuX-Music.core.call import APP
+from ZenakuX-Music.core.call import VIP
 from ZenakuX-Music.utils import seconds_to_min, time_to_seconds
 from ZenakuX-Music.utils.channelplay import get_channeplayCB
 from ZenakuX-Music.utils.database import add_served_chat_clone
@@ -387,7 +387,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await APP.stream_call(url)
+                await VIP.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await client.send_message(
@@ -618,8 +618,8 @@ async def play_music(client: Client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@Client.on_callback_query(filters.regex("APPmousAdmin") & ~BANNED_USERS)
-async def APPmous_check(client: Client, CallbackQuery):
+@Client.on_callback_query(filters.regex("VIPmousAdmin") & ~BANNED_USERS)
+async def VIPmous_check(client: Client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -629,7 +629,7 @@ async def APPmous_check(client: Client, CallbackQuery):
         pass
 
 
-@Client.on_callback_query(filters.regex("APPPlaylists") & ~BANNED_USERS)
+@Client.on_callback_query(filters.regex("VIPPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client: Client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
@@ -775,12 +775,12 @@ from youtubesearchpython.__future__ import VideosSearch
 
 import config
 from ZenakuX-Music import Carbon, YouTube
-from ZenakuX-Music.core.call import APP
+from ZenakuX-Music.core.call import VIP
 from ZenakuX-Music.misc import db
 from ZenakuX-Music.utils.database import add_active_video_chat, is_active_chat
 from ZenakuX-Music.utils.exceptions import AssistantErr
 from ZenakuX-Music.utils.inline import aq_markup, close_markup, stream_markup2
-from ZenakuX-Music.utils.pastebin import APPBin
+from ZenakuX-Music.utils.pastebin import VIPBin
 from ZenakuX-Music.utils.stream.queue import put_queue, put_queue_index
 
 
@@ -801,7 +801,7 @@ async def stream(
     if not result:
         return
     if forceplay:
-        await APP.force_stop_stream(chat_id)
+        await VIP.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
@@ -849,7 +849,7 @@ async def stream(
                 except Exception:
 
                     os.system(f"kill -9 {os.getpid()} && bash start")
-                await APP.join_call(
+                await VIP.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
@@ -888,7 +888,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await APPBin(msg)
+            link = await VIPBin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -941,7 +941,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await APP.join_call(
+            await VIP.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,
@@ -1003,7 +1003,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await APP.join_call(chat_id, original_chat_id, file_path, video=None)
+            await VIP.join_call(chat_id, original_chat_id, file_path, video=None)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -1055,7 +1055,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await APP.join_call(chat_id, original_chat_id, file_path, video=status)
+            await VIP.join_call(chat_id, original_chat_id, file_path, video=status)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -1111,7 +1111,7 @@ async def stream(
             n, file_path = await YouTube.video(link)
             if n == 0:
                 raise AssistantErr(_["str_3"])
-            await APP.join_call(
+            await VIP.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,
@@ -1168,7 +1168,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await APP.join_call(
+            await VIP.join_call(
                 chat_id,
                 original_chat_id,
                 link,
