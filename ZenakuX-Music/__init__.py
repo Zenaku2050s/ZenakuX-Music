@@ -13,7 +13,7 @@ git()
 dbb()
 heroku()
 
-app = SASUKE()
+app = VIP()
 api = SafoneAPI()
 userbot = Userbot()
 HELPABLE = {}
